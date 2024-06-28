@@ -22,7 +22,7 @@ const About = () => {
                 variants={slideInFromLeft(0.5)}
                 className="text-white text-center text-2xl"
               >
-                Hello, i'am Putu Rivan
+                Hello, i&apos;am Putu Rivan
               </motion.h1>
               <motion.p
                 whileInView={"visible"}

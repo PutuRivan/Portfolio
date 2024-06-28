@@ -16,7 +16,7 @@ const Contact = () => {
         className="flex flex-col gap-5  bg-gray-800 p-5 rounded-xl w-[400px]"
       >
         <div className="flex flex-col">
-          <h3 className="text-lg">Let's now each other</h3>
+          <h3 className="text-lg">Let&apos;s now each other</h3>
           <h2 className="text-xl">Contact Me</h2>
         </div>
         <div className="flex flex-col justify-center items-center gap-2">
