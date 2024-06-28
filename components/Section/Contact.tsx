@@ -1,5 +1,5 @@
 import React from "react";
-import { Socials } from "../Data/ContactContent";
+import { Socials } from "../Data/Contact";
 import { motion } from "framer-motion";
 import { slideInFromLeft, slideInFromRight } from "@/utils";
 const Contact = () => {

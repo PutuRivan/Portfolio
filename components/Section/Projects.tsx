@@ -1,7 +1,7 @@
 import React from "react";
 import { motion } from "framer-motion";
 import { slideInFromLeft, slideInFromRight } from "@/utils";
-import { Project } from "../Data/ProjectContents";
+import { Project } from "../Data/Project";
 import ProjectDataProvider from "../Contents/ProjectDataProvider";
 const Projects = () => {
   return (
