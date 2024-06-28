@@ -1,4 +1,3 @@
-import Image from "next/image";
 import React from "react";
 import { motion } from "framer-motion";
 import { slideInFromLeft, slideInFromRight, slideInFromTop, slideInFromTops } from "@/utils";
@@ -6,7 +5,7 @@ const About = () => {
   return (
     <section
       id="about"
-      className="w-full h-full mt-60 mb-10 flex flex-col gap-10"
+      className="w-full h-full pt-20 mt-60 mb-10 flex flex-col gap-10"
     >
       <div className="w-full h-full items-center justify-center pt-20">
         <div className="flex items-center justify-center">

@@ -6,7 +6,7 @@ const Contact = () => {
   return (
     <section
       id="contact"
-      className="w-full h-full py-60 px-10 flex flex-col gap-10 items-center justify-center"
+      className="w-full h-full py-60 px-10 flex flex-col gap-10 items-center justify-center "
     >
       <h1 className="text-4xl text-transparent bg-clip-text bg-gradient-to-r from-blue-500 to-cyan-500">
         Contact
@@ -16,7 +16,7 @@ const Contact = () => {
         whileInView={"visible"}
         initial={"hidden"}
         viewport={{ once: true }}
-        className="flex flex-col gap-5 bg-gray-800 p-5 rounded-xl w-[400px]"
+        className="flex flex-col gap-5 bg-gray-800 p-5 rounded-xl w-[400px] z-20"
       >
         <div className="flex flex-col">
           <h3 className="text-lg">Let&apos;s know each other</h3>

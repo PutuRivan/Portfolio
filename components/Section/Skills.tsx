@@ -4,7 +4,7 @@ import SkillDataProvider from "../Contents/SkillDataProviders";
 
 const Skills = () => {
   return (
-    <section id="skills" className="w-full h-full mt-40 px-10 pt-20">
+    <section id="skills" className="w-full h-full mt-40 px-10 pt-40">
       <div className="w-full h-full flex flex-col items-center justify-center gap-20">
         <h1 className="text-4xl text-transparent bg-clip-text bg-gradient-to-r from-cyan-500 to-blue-500">
           Skills
