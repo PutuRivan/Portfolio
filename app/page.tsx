@@ -7,13 +7,13 @@ import Projects from "@/components/main/Projects";
 import Skills from "@/components/main/Skills";
 export default function Home() {
   return (
-    <div>
+    <div className="">
       <Hero />
       <About />
       <Projects/>
       <Skills/>
-      {/* <Contact/> */}
-      <Footer/>
+      <Contact/>
+      {/* <Footer/> */}
     </div>
   );
 }
