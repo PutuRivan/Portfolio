@@ -21,9 +21,9 @@ export default function RootLayout({
       <head>
         <link rel="icon" href="/Me.png" type="image/png" sizes="32x32" />
       </head>
-      <body className={`${inter.className} bg-[#070c22] overflow-y-scroll overflow-x-hidden`}>
-        <StarsCanvas />
+      <body className={`${inter.className} bg-[#070c22] overflow-y-scroll`}>
         <Navbar />
+        <StarsCanvas />
         {children}
       </body>
     </html>
