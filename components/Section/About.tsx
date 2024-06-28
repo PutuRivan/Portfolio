@@ -17,12 +17,12 @@ const About = () => {
           whileInView={"visible"}
           initial={"hidden"}
           viewport={{ once: true }}
-          variants={slideInFromLeft(0.5)} className="p-5 my-20 max-w-[500px] h-auto rounded-xl flex flex-col gap-3 items-center order-2 lg:order-1 bg-gray-800">
+          variants={slideInFromLeft(0.5)} className="p-5 my-20 max-w-[500px] h-auto rounded-xl flex flex-col gap-3 items-center order-2 lg:order-1 bg-gray-800 z-20">
             <motion.h1
               whileInView={"visible"}
               initial={"hidden"}
-              viewport={{ once: false }}
-              variants={slideInFromTops(1)}
+              viewport={{ once: true }}
+              variants={slideInFromLeft(1)}
               className="text-white text-center text-2xl"
             >
               Hello, i&apos;am Putu Rivan
