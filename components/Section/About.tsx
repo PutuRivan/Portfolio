@@ -12,7 +12,7 @@ const About = () => {
         <div className="flex items-center justify-center">
           <h1 className="text-4xl text-transparent bg-clip-text bg-gradient-to-r from-cyan-500 to-blue-500">About Me</h1>
         </div>
-        <div className="grid grid-cols-1 lg:grid-cols-2   px-10 w-full place-items-center">
+        <div className="grid grid-cols-1 lg:grid-cols-2 px-10 place-items-center">
           <motion.div 
           whileInView={"visible"}
           initial={"hidden"}
@@ -21,7 +21,7 @@ const About = () => {
             <motion.h1
               whileInView={"visible"}
               initial={"hidden"}
-              viewport={{ once: true }}
+              viewport={{ once: false }}
               variants={slideInFromTops(1)}
               className="text-white text-center text-2xl"
             >
