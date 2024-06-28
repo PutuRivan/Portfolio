@@ -45,7 +45,7 @@ const About = () => {
             whileInView={"visible"}
             initial={"hidden"}
             viewport={{ once: true }}
-            variants={slideInFromRight(0.8)}
+            variants={slideInFromRight(1)}
             className="z-10 order-1"
           >
             <img src="/Me.png" alt="Image" />
