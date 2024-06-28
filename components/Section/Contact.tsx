@@ -19,12 +19,12 @@ const Contact = () => {
         className="flex flex-col gap-5 bg-gray-800 p-5 rounded-xl w-[400px] z-20"
       >
         <div className="flex flex-col">
-          <h3 className="text-lg">Let&apos;s know each other</h3>
+          <h3 className="text-lg text-center">Let&apos;s know each other</h3>
         </div>
         <div className="flex flex-col justify-center items-center gap-2">
-          <a href="" className="btn btn-outline btn-primary z-10">
+          {/* <a href="" className="btn btn-outline btn-primary z-10">
             Get in touch
-          </a>
+          </a> */}
           <p>Check Out My Social Media</p>
           <div className="flex flex-row gap-5 items-center justify-center">
             {Socials.map((social) => (
