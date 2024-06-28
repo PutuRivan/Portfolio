@@ -6,18 +6,18 @@ const Contact = () => {
   return (
     <section
       id="contact"
-      className="w-full h-full pb-40 px-10 flex items-center justify-center"
+      className="w-full h-full py-60 px-10 flex flex-col gap-10 items-center justify-center"
     >
+      <h1 className="text-4xl text-transparent bg-clip-text bg-gradient-to-r from-blue-500 to-cyan-500">Contact</h1>
       <motion.div
         variants={slideInFromLeft(0.5)}
         whileInView={"visible"}
         initial={"hidden"}
         viewport={{ once: true }}
-        className="flex flex-col gap-5  bg-gray-800 p-5 rounded-xl w-[400px]"
+        className="flex flex-col gap-5 bg-gray-800 p-5 rounded-xl w-[400px]"
       >
         <div className="flex flex-col">
           <h3 className="text-lg">Let&apos;s now each other</h3>
-          <h2 className="text-xl">Contact Me</h2>
         </div>
         <div className="flex flex-col justify-center items-center gap-2">
           <a href="" className="btn btn-outline btn-primary z-10">

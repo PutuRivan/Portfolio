@@ -10,7 +10,7 @@ const Hero = () => {
     <motion.div
       initial="hidden"
       animate="visible"
-      className="h-screen w-full pt-32 justify-center items-center flex flex-col"
+      className="h-screen w-full pt-20 justify-center items-center flex flex-col"
     >
       <div>
         <motion.div
@@ -23,14 +23,14 @@ const Hero = () => {
       </div>
       <div className="flex flex-col items-center justify-center">
         <div
-          className="flex flex-col gap-6 mt-6 text-6xl font-bold text-white max-w-[600px] justify-center items-center"
+          className="flex flex-col gap-6 mt-6 text-3xl lg:text-6xl font-bold text-white max-w-[600px] justify-center items-center"
         >
           <div className="flex flex-col">
-            <motion.div variants={slideInFromLeft(0.5)} className="flex flex-row gap-4">
-              <h1>Exploring</h1>
+            <motion.div variants={slideInFromLeft(0.5)} className="flex flex-row gap-4 text-3xl lg:text-6xl  justify-center">
+              <h1 className="">Exploring</h1>
               <span className="text-transparent bg-clip-text bg-gradient-to-r from-blue-500 to-cyan-500">Technology,</span>
             </motion.div>
-            <motion.div variants={slideInFromRight(0.5)} className="flex flex-row gap-4">
+            <motion.div variants={slideInFromRight(0.5)} className="flex flex-row gap-4 text-3xl lg:text-6xl justify-center">
               <h1>Embracing</h1>
               <span className="text-transparent bg-clip-text bg-gradient-to-r from-blue-500 to-cyan-500">Innovation,</span>
             </motion.div>
