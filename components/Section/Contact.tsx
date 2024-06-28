@@ -1,5 +1,5 @@
 import React from "react";
-import { Socials } from "../Contents/ContactContent";
+import { Socials } from "../Data/ContactContent";
 import { motion } from "framer-motion";
 import { slideInFromLeft, slideInFromRight } from "@/utils";
 const Contact = () => {
@@ -8,7 +8,9 @@ const Contact = () => {
       id="contact"
       className="w-full h-full py-60 px-10 flex flex-col gap-10 items-center justify-center"
     >
-      <h1 className="text-4xl text-transparent bg-clip-text bg-gradient-to-r from-blue-500 to-cyan-500">Contact</h1>
+      <h1 className="text-4xl text-transparent bg-clip-text bg-gradient-to-r from-blue-500 to-cyan-500">
+        Contact
+      </h1>
       <motion.div
         variants={slideInFromLeft(0.5)}
         whileInView={"visible"}
