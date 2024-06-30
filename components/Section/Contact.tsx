@@ -2,6 +2,7 @@ import React from "react";
 import { Socials } from "../Data/Contact";
 import { motion } from "framer-motion";
 import { slideInFromLeft, slideInFromRight } from "@/utils";
+import { CgMail } from "react-icons/cg";
 const Contact = () => {
   return (
     <section
@@ -12,27 +13,46 @@ const Contact = () => {
         Contact
       </h1>
       <motion.div
-        variants={slideInFromLeft(0.5)}
         whileInView={"visible"}
         initial={"hidden"}
         viewport={{ once: true }}
-        className="flex flex-col gap-5 bg-gray-800 p-5 rounded-xl w-[400px] z-20"
+        variants={slideInFromLeft(0.5)}
+        className="card bg-base-100 w-96 shadow-xl z-10"
       >
-        <div className="flex flex-col">
-          <h3 className="text-lg text-center">Let&apos;s know each other</h3>
-        </div>
-        <div className="flex flex-col justify-center items-center gap-2">
-          <a href="mailto:puturivana.d@gmai.com" className="btn btn-outline btn-primary z-10">
-            Mail Me
-          </a>
-          <p>Check Out My Social Media</p>
-          <div className="flex flex-row gap-5 items-center justify-center">
+        <motion.figure
+          whileInView={"visible"}
+          initial={"hidden"}
+          viewport={{ once: true }}
+          variants={slideInFromLeft(1)}
+          className="px-10 pt-10"
+        >
+          <img src="/Me.png" alt="Shoes" className="rounded-xl" />
+        </motion.figure>
+        <div className="card-body items-center text-center gap-5">
+          <motion.h2
+            whileInView={"visible"}
+            initial={"hidden"}
+            viewport={{ once: true }}
+            variants={slideInFromLeft(1)}
+            className="card-title"
+          >
+            Let&apos;s know each Other
+          </motion.h2>
+          <motion.p
+            whileInView={"visible"}
+            initial={"hidden"}
+            viewport={{ once: true }}
+            variants={slideInFromLeft(1)}
+          >
+            Check My Social Media
+          </motion.p>
+          <div className="flex flex-row gap-5">
             {Socials.map((social) => (
               <motion.a
                 whileInView={"visible"}
                 initial={"hidden"}
                 viewport={{ once: true }}
-                variants={slideInFromRight(0.8)}
+                variants={slideInFromRight(1)}
                 key={social.id}
                 href={social.link}
                 target="_blank"
@@ -41,6 +61,14 @@ const Contact = () => {
                 <img src={social.Logo} alt="" className="w-[30px]" />
               </motion.a>
             ))}
+          </div>
+          <div className="card-actions">
+            <motion.a whileInView={"visible"}
+                initial={"hidden"}
+                viewport={{ once: true }} variants={slideInFromRight(1)} href="mailto:puturivana.d@gmai.com" className="btn btn-primary">
+              <p>Mail Me!</p>
+              <CgMail size={20} />
+            </motion.a>
           </div>
         </div>
       </motion.div>
