@@ -15,7 +15,7 @@ export const Project = [
       id: 3,
       name: "Savory",
       link: "https://restaurant-savory.vercel.app/",
-      img: "Project/savory-1.png",
+      img: "Project/Savory-1.png",
     },
   ];
   

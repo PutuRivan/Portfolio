@@ -66,12 +66,6 @@ export const Skill_data = [
     height: 80,
   },
   {
-    skill_name: "Node js",
-    Image: "/Skill/node-js.png",
-    width: 80,
-    height: 80,
-  },
-  {
     skill_name: "Express js",
     Image: "/Skill/express.png",
     width: 80,
