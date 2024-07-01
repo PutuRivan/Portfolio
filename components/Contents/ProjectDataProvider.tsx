@@ -3,7 +3,6 @@
 import React from "react";
 import { motion } from "framer-motion";
 import { useInView } from "react-intersection-observer";
-import { slideInFromLeft } from "@/utils";
 interface props {
   id: number;
   name: string;
