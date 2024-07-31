@@ -21,7 +21,7 @@ const ProjectDataProvider = ({ id, name, link, img }: props) => {
       x: 0,
       opacity: 1,
       transition: {
-        delay: id / 2,
+        delay: id / 3,
         duration: 0.5,
       },
     },
@@ -45,7 +45,7 @@ const ProjectDataProvider = ({ id, name, link, img }: props) => {
         <a
           href={link}
           target="_blank"
-          className="btn btn-outline btn-primary z-10"
+          className="btn btn-primary z-10"
         >
           See More
         </a>

@@ -11,6 +11,7 @@ const Hero = () => {
       initial="hidden"
       animate="visible"
       className="h-full w-full pt-52 justify-center items-center flex flex-col"
+      id="hero"
     >
       <div>
         <motion.div
@@ -54,7 +55,7 @@ const Hero = () => {
         <motion.a
           variants={slideInFromLeft(0.9)}
           href="#projects"
-          className="btn btn-outline btn-primary z-10"
+          className="btn btn-primary z-10"
         >
           Learn More
         </motion.a>

@@ -2,6 +2,10 @@
 @tailwind components;
 @tailwind utilities;
 
+*{
+    scroll-behavior: smooth;
+}
+
 :root {
     --gradient: linear-gradient(to right, #2196f3, #00bcd4);
  }

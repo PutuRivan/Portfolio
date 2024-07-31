@@ -19,7 +19,7 @@ const Navbar = () => {
           variants={slideInFromTops(1.2)}
           className="flex lg:gap-10 gap-5 border border-gray-800 hover:border-blue-500 px-4 py-2 rounded-3xl"
         >
-          <Link href={"/"} className="Link-navbar">
+          <Link href={"#hero"} className="Link-navbar">
             Home
           </Link>
           <Link href={"#about"} className="Link-navbar">
