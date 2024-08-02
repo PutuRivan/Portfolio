@@ -17,7 +17,7 @@ const Contact = () => {
         initial={"hidden"}
         viewport={{ once: true }}
         variants={slideInFromLeft(0.5)}
-        className="card bg-base-100 w-96 shadow-xl z-10"
+        className="card bg-transparent border border-blue-900 shadow-md shadow-blue-900  w-96  z-10"
       >
         <motion.figure
           whileInView={"visible"}
@@ -34,7 +34,7 @@ const Contact = () => {
             initial={"hidden"}
             viewport={{ once: true }}
             variants={slideInFromLeft(1)}
-            className="card-title"
+            className="card-title text-white"
           >
             Let&apos;s know each Other
           </motion.h2>
@@ -43,6 +43,7 @@ const Contact = () => {
             initial={"hidden"}
             viewport={{ once: true }}
             variants={slideInFromLeft(1)}
+            className="text-white"
           >
             Check My Social Media
           </motion.p>

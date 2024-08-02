@@ -3,7 +3,7 @@ export const Socials = [
       id: 1,
       name: "Github",
       link: "https://github.com/PutuRivan",
-      Logo: "Contact/github-logo.png",
+      Logo: "Contact/gitwhite.png",
     },
     {
       id: 2,
@@ -15,7 +15,7 @@ export const Socials = [
       id: 3,
       name: "X",
       link: "https://twitter.com/rivanputu_",
-      Logo: "Contact/twitter.png",
+      Logo: "Contact/Xwhite.png",
     },
     {
       id: 4,
