@@ -13,7 +13,8 @@ const Projects = () => {
         </h1>
         <div className="grid grid-cols-1 lg:grid-cols-3 mt-10 place-items-center">
           {Project.map((project) => (
-            <div className="flex my-10">
+            <div className="flex my-10"
+            key={project.id}>
               <ProjectDataProvider
                 key={project.id}
                 id={project.id}
