@@ -52,13 +52,13 @@ const ProjectDataProvider = ({ id, name, link, img, description }: props) => {
                   <h3 className="max-w-xs !pb-2 !m-0 font-bold  text-base text-white">
                     {name}
                   </h3>
+                  <div className="flex flex-1 w-full rounded-lg " >
+                    <img src={img} alt="" />
+                  </div>
                   <div className="text-base !m-0 !p-0 font-normal">
                     <span className="text-white ">
                       {description}
                     </span>
-                  </div>
-                  <div className="flex flex-1 w-full rounded-lg " >
-                    <img src={img} alt="" />
                   </div>
                 </div>
               </PinContainer>
