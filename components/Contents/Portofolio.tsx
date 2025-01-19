@@ -75,7 +75,7 @@ const Portofolio = () => {
           {Project.length > 6 && (
             <Button
               variant={"outline"}
-              className="mx-10 mt-5"
+              className="mx-10 mt-5 z-20"
               onClick={toggleVisibleProjects}
             >
               {visibleProjects === 6 ? "See More" : "See Less"}
@@ -92,7 +92,7 @@ const Portofolio = () => {
           {Certificates.length > 6 && (
             <Button
               variant={"outline"}
-              className="mx-10 mt-5"
+              className="mx-10 mt-5 z-20"
               onClick={toggleVisibleCertificates}
             >
               {visibleCertificates === 6 ? "See More" : "See Less"}
@@ -113,7 +113,7 @@ const Portofolio = () => {
           {Skill_data.length > 14 && (
             <Button
               variant={"outline"}
-              className="mx-10 mt-5"
+              className="mx-10 mt-5 z-20"
               onClick={toggleVisibleStack}
             >
               {visibleStack === 14 ? "See More" : "See Less"}

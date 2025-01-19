@@ -35,11 +35,11 @@ const ProjectDetail = ({
       <div className="z-50 grid grid-cols-2 gap-5">
         <div className="z-50 flex flex-col gap-5">
           <div className="z-50 flex flex-col gap-5">
-            <h1 className="z-50 text-4xl font-bold">{title}</h1>
-            <p className="text-justify">{description}</p>
+            <h1 className="z-50 text-3xl font-bold text-center">{title}</h1>
+            <p className="text-justify text-md">{description}</p>
           </div>
           <div>
-            <h1 className="z-50 text-3xl font-bold my-2">Technologies :</h1>
+            <h1 className="z-50 text-2xl font-bold my-2">Technologies :</h1>
 
             <div className="z-50 flex flex-wrap gap-5">
               {tech.map((item, index) => (

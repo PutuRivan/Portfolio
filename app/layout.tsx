@@ -20,7 +20,7 @@ export default function RootLayout({
       <head>
         <link rel="icon" href="/Me.png" type="image/png" sizes="32x32" />
       </head>
-      <body className={`${inter.className} text-blue-100 bg-[#070c22] overflow-y-scroll`}>
+      <body className={`${inter.className} text-blue-100 bg-[#070c22]`}>
         <StarsCanvas />
         {children}
       </body>

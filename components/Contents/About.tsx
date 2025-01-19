@@ -9,6 +9,8 @@ import Link from "next/link";
 import { Project } from "@/data/Project";
 import { Certificates } from "@/data/Certificates";
 import { Skill_data } from "@/data/Skills";
+import { LuBlocks } from "react-icons/lu";
+import { IoDocumentTextSharp } from "react-icons/io5";
 
 const About = () => {
   return (
@@ -32,8 +34,18 @@ const About = () => {
             productive life.
           </p>
           <div className="flex flex-row gap-5">
-            <Button size={"lg"} className="z-20">Download CV</Button>
+            <Button size={"lg"} className="z-20">
+              <IoDocumentTextSharp size={24} />
+              <Link
+                href={
+                  "https://drive.google.com/file/d/1NVwsBl-2HCS7o8LtxrJdmBmejy_wGEwj/view?usp=sharing"
+                }
+              >
+                Download CV
+              </Link>
+            </Button>
             <Button variant={"outline"} size={"lg"} className="z-20">
+              <FaCode size={24} />
               <Link href={"#portfolio"}>View Project</Link>
             </Button>
           </div>
@@ -61,7 +73,7 @@ const About = () => {
           title="Total Stack"
           total={Skill_data.length}
           description="Continuous learning and growth"
-          icons={LiaCertificateSolid}
+          icons={LuBlocks}
         />
       </div>
     </section>
