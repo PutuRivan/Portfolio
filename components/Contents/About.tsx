@@ -39,7 +39,7 @@ const About = () => {
           </div>
         </div>
 
-        <figure className="md:order-2 order-1">
+        <figure className="md:order-2 order-1 z-20">
           <Image src="/Me.png" alt="profile" width={500} height={500} />
         </figure>
       </div>
