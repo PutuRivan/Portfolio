@@ -1,6 +1,6 @@
 "use client";
 
-import ProjectDetail from "@/components/contents/project-detail";
+import ProjectDetail from "@/components/Contents/project-detail";
 import { Project } from "@/data/Project";
 import { useParams } from "next/navigation";
 import React from "react";
