@@ -1,10 +1,11 @@
 "use client";
-import About from "@/components/Section/About";
-import Contact from "@/components/Section/Contact";
-import Footer from "@/components/Section/Footer";
-import Hero from "@/components/Section/Hero";
-import Projects from "@/components/Section/Projects";
-import Skills from "@/components/Section/Skills";
+
+import About from "@/components/Contents/About";
+import Contact from "@/components/Contents/Contact";
+import Hero from "@/components/Contents/Hero";
+import Portofolio from "@/components/Contents/Portofolio";
+import Navbar from "@/components/utils/Navbar";
+import React from "react";
 import { useEffect, useState } from "react";
 export default function Home() {
   const [isClient, setIsClient] = useState(false)
@@ -13,13 +14,16 @@ export default function Home() {
     setIsClient(true)
   }, [])
   return (
-    <div className="">
-      <Hero />
-      <About />
-      <Projects />
-      <Skills />
-      <Contact />
-      {/* <Footer/> */}
-    </div>
+    <>
+      <header>
+        <Navbar />
+      </header>
+      <main className="flex flex-col gap-32 z-20">
+        <Hero />
+        <About />
+        <Portofolio />
+        <Contact />
+      </main>
+    </>
   );
 }
