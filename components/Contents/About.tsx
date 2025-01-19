@@ -26,12 +26,13 @@ const About = () => {
             <h1 className="text-center">Putu Rivan Anggana</h1>
           </div>
           <p className="text-gray-400 my-5 max-w-[600px] text-justify">
-            a student at UPN Veteran Jakarta. I have a strong interest in
-            technological advancements and am always enthusiastic about keeping
-            up with the latest innovations in this field. Additionally, I am
-            very passionate about sports, as I believe that maintaining a
-            balance between body and mind is key to living a healthy and
-            productive life.
+            Informatics student passionate about Fullstack Web Development and
+            UI/UX design, with strong expertise in JavaScript programming.
+            Experienced in developing and deploying responsive web applications,
+            and actively engaged in professional organizations to enhance both
+            technical and interpersonal skills. Continuously seeking
+            opportunities to contribute to innovative projects and grow as a
+            versatile developer.
           </p>
           <div className="flex flex-row gap-5">
             <Button size={"lg"} className="z-20">
@@ -52,7 +53,13 @@ const About = () => {
         </div>
 
         <figure className="md:order-2 order-1 z-20">
-          <Image src="/Me.png" alt="profile" width={500} height={500} />
+          <Image
+            src="/Me.png"
+            alt="profile"
+            width={500}
+            height={500}
+            className="transition-all duration-300 ease-in-out scale-100 hover:scale-105 rounded-full z-20"
+          />
         </figure>
       </div>
 

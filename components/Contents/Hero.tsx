@@ -7,7 +7,10 @@ import { Button } from "../ui/button";
 
 const Hero = () => {
   return (
-    <section id="hero" className="py-44 flex flex-col items-center justify-center">
+    <section
+      id="hero"
+      className="py-44 flex flex-col items-center justify-center"
+    >
       {/* Badge */}
       <div className="flex flex-row gap-3 border border-[#fff] px-6 py-3 rounded-xl opacity-[0.9] ">
         <PiShootingStarFill size={24} fill="#2196f3" />
@@ -36,9 +39,14 @@ const Hero = () => {
         </p>
       </div>
       {/* Social */}
-      <div className="flex flex-row gap-5 z-10">
+      <div className="flex flex-row gap-2">
         {Socials.map((social, index) => (
-          <Link key={index} href={social.link} target="_blank">
+          <Link
+            key={index}
+            href={social.link}
+            target="_blank"
+            className="z-10 hover:bg-slate-100/10 transition-all duration-300 ease-in-out p-2 rounded-full"
+          >
             <Image src={social.Logo} alt={social.name} width={35} height={35} />
           </Link>
         ))}
@@ -48,7 +56,7 @@ const Hero = () => {
         <Button variant={"outline"} size={"lg"}>
           <Link href={"#about"}>More About</Link>
         </Button>
-        <Button  size={"lg"} className="px-11">
+        <Button size={"lg"} className="px-11">
           <Link href={"#portfolio"}>Projects</Link>
         </Button>
       </div>
