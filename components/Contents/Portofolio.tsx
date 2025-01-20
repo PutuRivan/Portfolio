@@ -61,7 +61,7 @@ const Portofolio = () => {
         {/* Projects */}
         <TabsContent value="Projects">
           <div className="grid md:grid-cols-3 grid-cols-1 gap-5 mx-10">
-            {Project.slice(0, visibleProjects).map((project) => (
+            {Project.slice(0, visibleProjects).map((project, index) => (
               <CardProject
                 key={project.id}
                 id={project.id}
@@ -69,6 +69,7 @@ const Portofolio = () => {
                 Title={project.name}
                 Description={project.description}
                 ProjectLink={project.link}
+                delay={index / 10}
               />
             ))}
           </div>
@@ -86,7 +87,11 @@ const Portofolio = () => {
         <TabsContent value="Certificates">
           <div className="grid md:grid-cols-3 grid-cols-1 gap-5 mx-10">
             {Certificates.slice(0, visibleCertificates).map((sertif, index) => (
-              <CardCertificates key={index} ImgSertif={sertif.link} />
+              <CardCertificates
+                key={index}
+                ImgSertif={sertif.link}
+                delay={index / 10}
+              />
             ))}
           </div>
           {Certificates.length > 6 && (
@@ -107,6 +112,7 @@ const Portofolio = () => {
                 key={index}
                 TechStackIcon={skill.Image}
                 Language={skill.skill_name}
+                delay={index / 10}
               />
             ))}
           </div>

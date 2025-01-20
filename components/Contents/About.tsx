@@ -11,6 +11,8 @@ import { Certificates } from "@/data/Certificates";
 import { Skill_data } from "@/data/Skills";
 import { LuBlocks } from "react-icons/lu";
 import { IoDocumentTextSharp } from "react-icons/io5";
+import { motion } from "framer-motion";
+import { slideInFromLeft, slideInFromRight } from "@/utils";
 
 const About = () => {
   return (
@@ -20,7 +22,12 @@ const About = () => {
         description="Transforming ideas into digital experiences"
       />
       <div className="grid grid-cols-1 md:grid-cols-2 place-items-center">
-        <div className="order-2 md:order-1">
+        <motion.div
+          initial={"hidden"}
+          animate={"visible"}
+          variants={slideInFromLeft(0.5)}
+          className="order-2 md:order-1"
+        >
           <div className="font-bold text-white text-6xl">
             <span className="text-[#2196f3]">Hello, i&apos;am</span>
             <h1 className="text-center">Putu Rivan Anggana</h1>
@@ -50,9 +57,15 @@ const About = () => {
               <Link href={"#portfolio"}>View Project</Link>
             </Button>
           </div>
-        </div>
+        </motion.div>
 
-        <figure className="md:order-2 order-1 z-20">
+        <motion.figure
+          whileInView={"visible"}
+          initial={"hidden"}
+          viewport={{ once: true }}
+          variants={slideInFromRight(0.5)}
+          className="md:order-2 order-1 z-20"
+        >
           <Image
             src="/Me.png"
             alt="profile"
@@ -60,7 +73,7 @@ const About = () => {
             height={500}
             className="transition-all duration-300 ease-in-out scale-100 hover:scale-105 rounded-full z-20"
           />
-        </figure>
+        </motion.figure>
       </div>
 
       <div className="flex flex-col md:flex-row md:gap-20 gap-5 my-10 items-center justify-center">
@@ -69,18 +82,21 @@ const About = () => {
           total={Project.length}
           description="Innovative web Solutions crafted"
           icons={FaCode}
+          delay={0.5}
         />
         <CardAbout
           title="Certificate"
           total={Certificates.length}
           description="Professional skills validated"
           icons={LiaCertificateSolid}
+          delay={1}
         />
         <CardAbout
           title="Total Stack"
           total={Skill_data.length}
           description="Continuous learning and growth"
           icons={LuBlocks}
+          delay={1.5}
         />
       </div>
     </section>

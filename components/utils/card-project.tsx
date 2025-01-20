@@ -1,6 +1,8 @@
 import { ArrowRight, ExternalLink } from "lucide-react";
 import Image from "next/image";
 import Link from "next/link";
+import { motion } from "framer-motion";
+import { slideInFromLeft } from "@/utils";
 
 interface Props {
   id: number;
@@ -8,9 +10,10 @@ interface Props {
   Title: string;
   Description: string;
   ProjectLink: string;
+  delay: number;
 }
 
-const CardProject = ({ Img, Title, Description, ProjectLink, id }: Props) => {
+const CardProject = ({ Img, Title, Description, ProjectLink, id, delay }: Props) => {
   // Handle kasus ketika ProjectLink kosong
   const handleLiveDemo = (e: any) => {
     if (!ProjectLink) {
@@ -29,7 +32,12 @@ const CardProject = ({ Img, Title, Description, ProjectLink, id }: Props) => {
   };
 
   return (
-    <div className="group relative w-full z-20">
+    <motion.div
+    initial={"hidden"}
+    whileInView={"visible"}
+      variants={slideInFromLeft(delay)}
+      className="group relative w-full z-20"
+    >
       <div className="relative overflow-hidden rounded-xl bg-gradient-to-br from-slate-900/90 to-slate-800/90 backdrop-blur-lg border border-white/10 shadow-2xl transition-all duration-300 hover:shadow-blue-500/20">
         <div className="absolute inset-0 bg-gradient-to-br from-blue-500/10 via-cyan-500/10 to-sky-500/10 opacity-50 group-hover:opacity-70 transition-opacity duration-300"></div>
 
@@ -91,7 +99,7 @@ const CardProject = ({ Img, Title, Description, ProjectLink, id }: Props) => {
           <div className="absolute inset-0 border border-white/0 group-hover:border-blue-500/50 rounded-xl transition-colors duration-300 -z-50"></div>
         </div>
       </div>
-    </div>
+    </motion.div>
   );
 };
 

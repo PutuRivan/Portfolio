@@ -5,12 +5,15 @@ import { Modal, IconButton, Box, Backdrop, Typography } from "@mui/material";
 import CloseIcon from "@mui/icons-material/Close";
 import FullscreenIcon from "@mui/icons-material/Fullscreen";
 import Image from "next/image";
+import { motion } from "framer-motion";
+import { slideInFromLeft } from "@/utils";
 
 interface Props {
   ImgSertif: string;
+  delay: number;
 }
 
-const CardCertificates = ({ ImgSertif }: Props) => {
+const CardCertificates = ({ ImgSertif, delay }: Props) => {
   const [open, setOpen] = useState(false);
 
   const handleOpen = () => {
@@ -24,114 +27,120 @@ const CardCertificates = ({ ImgSertif }: Props) => {
   return (
     <Box className="z-20" component="div" sx={{ width: "100%" }}>
       {/* Thumbnail Container */}
-      <Box
-        className="z-20"
-        sx={{
-          position: "relative",
-          overflow: "hidden",
-          borderRadius: 2,
-          boxShadow: "0 8px 16px rgba(0,0,0,0.1)",
-          transition: "all 0.3s cubic-bezier(0.4, 0, 0.2, 1)",
-          "&:hover": {
-            transform: "translateY(-5px)",
-            boxShadow: "0 12px 24px rgba(0,0,0,0.2)",
-            "& .overlay": {
-              opacity: 1,
-            },
-            "& .hover-content": {
-              transform: "translate(-50%, -50%)",
-              opacity: 1,
-            },
-            "& .certificate-image": {
-              filter: "contrast(1.05) brightness(1) saturate(1.1)",
-            },
-          },
-        }}
+      <motion.div
+        initial={"hidden"}
+        whileInView={"visible"}
+        variants={slideInFromLeft(delay)}
       >
-        {/* Certificate Image with Initial Filter */}
         <Box
+          className="z-20"
           sx={{
             position: "relative",
-            "&::before": {
-              content: '""',
+            overflow: "hidden",
+            borderRadius: 2,
+            boxShadow: "0 8px 16px rgba(0,0,0,0.1)",
+            transition: "all 0.3s cubic-bezier(0.4, 0, 0.2, 1)",
+            "&:hover": {
+              transform: "translateY(-5px)",
+              boxShadow: "0 12px 24px rgba(0,0,0,0.2)",
+              "& .overlay": {
+                opacity: 1,
+              },
+              "& .hover-content": {
+                transform: "translate(-50%, -50%)",
+                opacity: 1,
+              },
+              "& .certificate-image": {
+                filter: "contrast(1.05) brightness(1) saturate(1.1)",
+              },
+            },
+          }}
+        >
+          {/* Certificate Image with Initial Filter */}
+          <Box
+            sx={{
+              position: "relative",
+              "&::before": {
+                content: '""',
+                position: "absolute",
+                top: 0,
+                left: 0,
+                right: 0,
+                bottom: 0,
+                backgroundColor: "rgba(0, 0, 0, 0.1)",
+                zIndex: 20,
+              },
+            }}
+          >
+            <Image
+              className="certificate-image z-20"
+              src={ImgSertif}
+              alt="Certificate"
+              width={400}
+              height={200}
+              style={{
+                width: "100%",
+                height: "auto",
+                display: "block",
+                objectFit: "cover",
+                filter: "contrast(1.10) brightness(0.9) saturate(1.1)",
+                transition: "filter 0.3s ease",
+              }}
+              onClick={handleOpen}
+            />
+          </Box>
+
+          {/* Hover Overlay */}
+          <Box
+            className="overlay"
+            sx={{
               position: "absolute",
               top: 0,
               left: 0,
               right: 0,
               bottom: 0,
-              backgroundColor: "rgba(0, 0, 0, 0.1)",
+              opacity: 0,
+              transition: "all 0.3s ease",
+              cursor: "pointer",
               zIndex: 20,
-            },
-          }}
-        >
-          <Image
-            className="certificate-image z-20"
-            src={ImgSertif}
-            alt="Certificate"
-            width={400}
-            height={200}
-            style={{
-              width: "100%",
-              height: "auto",
-              display: "block",
-              objectFit: "cover",
-              filter: "contrast(1.10) brightness(0.9) saturate(1.1)",
-              transition: "filter 0.3s ease",
             }}
             onClick={handleOpen}
-          />
-        </Box>
-
-        {/* Hover Overlay */}
-        <Box
-          className="overlay"
-          sx={{
-            position: "absolute",
-            top: 0,
-            left: 0,
-            right: 0,
-            bottom: 0,
-            opacity: 0,
-            transition: "all 0.3s ease",
-            cursor: "pointer",
-            zIndex: 20,
-          }}
-          onClick={handleOpen}
-        >
-          {/* Hover Content */}
-          <Box
-            className="hover-content"
-            sx={{
-              position: "absolute",
-              top: "50%",
-              left: "50%",
-              transform: "translate(-50%, -60%)",
-              opacity: 0,
-              transition: "all 0.4s ease",
-              textAlign: "center",
-              width: "100%",
-              color: "white",
-            }}
           >
-            <FullscreenIcon
+            {/* Hover Content */}
+            <Box
+              className="hover-content"
               sx={{
-                fontSize: 40,
-                mb: 1,
-                filter: "drop-shadow(0 2px 4px rgba(0,0,0,0.2))",
-              }}
-            />
-            <Typography
-              variant="h6"
-              sx={{
-                fontWeight: 600,
-                textShadow: "0 2px 4px rgba(0,0,0,0.3)",
+                position: "absolute",
+                top: "50%",
+                left: "50%",
+                transform: "translate(-50%, -60%)",
+                opacity: 0,
+                transition: "all 0.4s ease",
+                textAlign: "center",
+                width: "100%",
+                color: "white",
               }}
             >
-              View Certificate
-            </Typography>
+              <FullscreenIcon
+                sx={{
+                  fontSize: 40,
+                  mb: 1,
+                  filter: "drop-shadow(0 2px 4px rgba(0,0,0,0.2))",
+                }}
+              />
+              <Typography
+                variant="h6"
+                sx={{
+                  fontWeight: 600,
+                  textShadow: "0 2px 4px rgba(0,0,0,0.3)",
+                }}
+              >
+                View Certificate
+              </Typography>
+            </Box>
           </Box>
         </Box>
-      </Box>
+      </motion.div>
 
       {/* Modal */}
       <Modal
