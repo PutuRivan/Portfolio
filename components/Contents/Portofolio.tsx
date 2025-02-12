@@ -69,7 +69,7 @@ const Portofolio = () => {
                 Title={project.name}
                 Description={project.description}
                 ProjectLink={project.link}
-                delay={index / 10}
+                delay={visibleProjects > 6 ? index / 30 : index / 10}
               />
             ))}
           </div>
@@ -90,7 +90,7 @@ const Portofolio = () => {
               <CardCertificates
                 key={index}
                 ImgSertif={sertif.link}
-                delay={index / 10}
+                delay={visibleCertificates > 6 ? index / 30 : index / 10}
               />
             ))}
           </div>
@@ -112,7 +112,7 @@ const Portofolio = () => {
                 key={index}
                 TechStackIcon={skill.Image}
                 Language={skill.skill_name}
-                delay={index / 10}
+                delay={visibleStack > 14 ? index / 30 : index / 10}
               />
             ))}
           </div>

@@ -10,7 +10,7 @@ const CTA = () => {
   return (
     <Button
       onClick={handleBack}
-      className="z-50 flex flex-row items-center my-5"
+      className="z-50 flex flex-row items-center my-10 mx-5"
     >
       <IoMdArrowRoundBack size={24} className="z-50" onClick={handleBack}/>
       <p className="z-50">Back</p>

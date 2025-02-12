@@ -17,7 +17,7 @@ const DetailProject = () => {
       {Project.map((data, index) => {
         if (data.id === ~~id) {
           return (
-            <main key={index} className="z-50 m-10">
+            <main key={index} className="z-50">
               <ProjectDetail
                 features={data.feature}
                 technologies={data.stack}
