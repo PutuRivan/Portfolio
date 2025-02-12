@@ -121,7 +121,7 @@ const ProjectDetail = ({
 
           <div>
             <h1 className="z-50 text-2xl font-bold my-2">Technologies :</h1>
-            <div className="z-50 flex flex-wrap gap-5">
+            <div className="z-50 flex flex-wrap gap-5 justify-center">
               {tech.map((item, index) => (
                 <CardStackDetail
                   key={index}
