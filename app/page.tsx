@@ -18,7 +18,7 @@ export default function Home() {
       <header>
         <Navbar />
       </header>
-      <main className="flex flex-col gap-32 z-20">
+      <main className="flex flex-col gap-32 z-20 w-full h-full">
         <Hero />
         <About />
         <Portofolio />

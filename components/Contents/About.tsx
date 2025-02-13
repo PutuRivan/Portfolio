@@ -47,7 +47,7 @@ const About = () => {
               <IoDocumentTextSharp size={24} />
               <Link
                 href={
-                  "https://drive.google.com/file/d/1NVwsBl-2HCS7o8LtxrJdmBmejy_wGEwj/view?usp=sharing"
+                  "https://drive.google.com/file/d/12yjF9OFHD-EWcOpkuSni9UlHDhB3hugR/view?usp=drive_link"
                 }
               >
                 Download CV
