@@ -14,8 +14,8 @@ interface Props {
   image: string;
   features: string[] | undefined;
   role: string;
-  github:string | undefined;
-  link:string | undefined
+  github: string | undefined;
+  link: string | undefined
 }
 
 const ProjectDetail = ({
@@ -29,9 +29,7 @@ const ProjectDetail = ({
   link
 }: Props) => {
   // Map technologies ID to Skill_data
-  const tech = technologies?
-    .map((data) => Skill_data.find((item) => item.id === data))
-    .filter((item) => item !== undefined); // Filter to remove undefined
+  const tech = technologies?.map((data: any) => Skill_data.find((item) => item.id === data)).filter((item: any) => item !== undefined); // Filter to remove undefined
 
   return (
     <section className="z-50 mx-5">
@@ -47,11 +45,11 @@ const ProjectDetail = ({
             <div>
               <h1 className="z-50 text-2xl font-bold my-2">Technologies :</h1>
               <div className="z-50 flex flex-wrap gap-5">
-                {tech?.map((item, index) => (
+                {tech?.map((item: any, index: any) => (
                   <CardStackDetail
                     key={index}
-                    TechStackIcon={item.Image}
-                    Language={item.skill_name}
+                    TechStackIcon={item?.Image}
+                    Language={item?.skill_name}
                   />
                 ))}
               </div>
@@ -59,17 +57,17 @@ const ProjectDetail = ({
             <div className="z-50 flex flex-row gap-5 justify-center">
               {github && <Button size={"lg"}>
                 <Link href={github} target="_blank" className="flex gap-3 item-center justify-center">
-                <Image
-                  src="/Contact/gitwhite.png"
-                  alt="github"
-                  width={20}
-                  height={20}
-                />
-                <p>Github</p>
+                  <Image
+                    src="/Contact/gitwhite.png"
+                    alt="github"
+                    width={20}
+                    height={20}
+                  />
+                  <p>Github</p>
                 </Link>
               </Button>}
               {link && <Button variant={"outline"} size={"lg"}>
-                <Link href={link} target="_blank" className="flex gap-2">   
+                <Link href={link} target="_blank" className="flex gap-2">
                   <ExternalLink size={24} />
                   <p>Live Demo</p>
                 </Link>
@@ -92,15 +90,15 @@ const ProjectDetail = ({
               <h1>
                 <span className="font-bold text-xl">Role :</span> {role}
               </h1>
-              {features && 
-              <ul className="list-disc">
-                <h1 className="text-2xl font-bold"> Feature</h1>
-                {features?.map((item, index) => (
-                  <li key={index}>{item}</li>
-                ))}
-              </ul>
+              {features &&
+                <ul className="list-disc">
+                  <h1 className="text-2xl font-bold"> Feature</h1>
+                  {features?.map((item, index) => (
+                    <li key={index}>{item}</li>
+                  ))}
+                </ul>
               }
-             
+
             </div>
           </div>
         </div>
@@ -120,14 +118,14 @@ const ProjectDetail = ({
             />
           </figure>
           <p className="text-justify text-sm mx-5">{description}</p>
-          
+
           {features && <ul className="list-disc mx-5">
             <h1 className="text-2xl font-bold"> Feature</h1>
             {features?.map((item, index) => (
               <li key={index}>{item}</li>
             ))}
           </ul>}
-          
+
 
           <h1>
             <span className="font-bold text-xl">Role :</span> {role}
@@ -139,27 +137,27 @@ const ProjectDetail = ({
               {tech?.map((item, index) => (
                 <CardStackDetail
                   key={index}
-                  TechStackIcon={item.Image}
-                  Language={item.skill_name}
+                  TechStackIcon={item?.Image}
+                  Language={item?.skill_name}
                 />
               ))}
             </div>
           </div>
 
           <div className="z-50 flex flex-row gap-5 justify-center">
-             {github && <Button size={"lg"}>
-                <Image
-                  src="/Contact/gitwhite.png"
-                  alt="github"
-                  width={20}
-                  height={20}
-                />
-                <p>Github</p>
-              </Button>}
-              {link && <Button variant={"outline"} size={"lg"}>
-                <ExternalLink size={24} />
-                <p>Live Demo</p>
-              </Button>}
+            {github && <Button size={"lg"}>
+              <Image
+                src="/Contact/gitwhite.png"
+                alt="github"
+                width={20}
+                height={20}
+              />
+              <p>Github</p>
+            </Button>}
+            {link && <Button variant={"outline"} size={"lg"}>
+              <ExternalLink size={24} />
+              <p>Live Demo</p>
+            </Button>}
           </div>
         </div>
       </div>
