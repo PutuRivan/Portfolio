@@ -25,6 +25,8 @@ const DetailProject = () => {
                 description={data.description}
                 image={data.img}
                 role={data.role}
+                github={data.github}
+                link={data.link}
               />
             </main>
           );

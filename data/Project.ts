@@ -71,4 +71,26 @@ export const Project = [
       "Login system for personalized user interactions and preferences.",
     ],
   },
+  {
+    id: 5,
+    name: "Dignition",
+    link: "",
+    img:"/Project/dignition.png",
+    description : `
+      Dignition is a Learning Management System developed 
+      to support the study club programs of KSM Android at UPN Veteran Jakarta. 
+      This platform was designed to streamline internal learning activities by 
+      providing structured access to class materials, assignment submissions, 
+      and attendance tracking. In this project, I was responsible for implementing several 
+      key features, including a dedicated role and page for mentees—allowing them to upload 
+      assignments, record attendance, and access relevant learning materials. I also developed 
+      a user registration feature that automatically assigns the mentee role to new users, 
+      streamlining the onboarding process. Additionally, I implemented a feature to export 
+      attendance data by class into CSV format to support easier data management. 
+      Beyond development, I was also actively involved in maintaining 
+      the system to ensure its stability and optimal performance over time.
+    `,
+     stack: [7, 4, 17, 20],
+     role : "Frontend Developer"
+  }
 ];
