@@ -51,20 +51,20 @@ const Hero = () => {
       {/* Social */}
       <div className="flex flex-row gap-2">
         {Socials.map((social, index) => (
-          <motion.div key={index} variants={slideInFromLeft(index / 2)}>
-            <Link
-              href={social.link}
-              target="_blank"
-              className="z-10 hover:bg-slate-100/10 transition-all duration-300 ease-in-out p-2 rounded-full"
-            >
+          <Link
+            href={social.link}
+            target="_blank"
+            className="z-10 hover:bg-slate-100/10 transition-all duration-300 ease-in-out p-2 rounded-full"
+          >
+            <motion.div key={index} variants={slideInFromLeft(index / 2)}>
               <Image
                 src={social.Logo}
                 alt={social.name}
                 width={35}
                 height={35}
               />
-            </Link>
-          </motion.div>
+            </motion.div>
+          </Link>
         ))}
       </div>
       {/* More Button */}

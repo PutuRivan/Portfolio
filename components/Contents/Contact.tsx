@@ -42,21 +42,21 @@ const Contact = () => {
         </motion.div>
         <div className="flex flex-row gap-3 items-center justify-center">
           {Socials.map((social, index) => (
-            <motion.div variants={slideInFromLeft(index / 2)} key={index}>
-              <Link
-                key={social.id}
-                href={social.link}
-                target="_blank"
-                className="z-10 hover:bg-slate-100/10 transition-all duration-300 ease-in-out rounded-full"
-              >
+            <Link
+              key={social.id}
+              href={social.link}
+              target="_blank"
+              className="z-10 hover:bg-slate-100/10 transition-all duration-300 ease-in-out rounded-full"
+            >
+              <motion.div variants={slideInFromLeft(index / 2)} key={index}>
                 <Image
                   src={social.Logo}
                   alt={social.name}
                   width={30}
                   height={30}
                 />
-              </Link>
-            </motion.div>
+              </motion.div>
+            </Link>
           ))}
         </div>
         <motion.div className="card-actions mx-10  items-center justify-center my-5" variants={slideInFromLeft(1)}>

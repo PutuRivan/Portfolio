@@ -43,20 +43,23 @@ const About = () => {
             versatile developer.
           </p>
           <div className="flex flex-row gap-5 justify-center">
-            <Button size={"lg"} className="z-20">
-              <IoDocumentTextSharp size={24} />
-              <Link
-                href={
-                  "https://drive.google.com/file/d/12yjF9OFHD-EWcOpkuSni9UlHDhB3hugR/view?usp=drive_link"
-                }
-              >
+            <a
+              href="https://drive.google.com/uc?export=download&id=1WhlVpv_dtj3oyGEMYFhkhSFDRme5bWO4"
+              target="_blank"
+              rel="noopener noreferrer"
+              className="flex flex-row gap-2"
+            >
+              <Button size={"lg"} className="z-20">
+                <IoDocumentTextSharp size={24} />
                 Download CV
-              </Link>
-            </Button>
-            <Button variant={"outline"} size={"lg"} className="z-20">
-              <FaCode size={24} />
-              <Link href={"#portfolio"}>View Project</Link>
-            </Button>
+              </Button>
+            </a>
+            <Link href={"#portfolio"} className="flex flex-row gap-2">
+              <Button variant={"outline"} size={"lg"} className="z-20">
+                <FaCode size={24} />
+                View Project
+              </Button>
+            </Link>
           </div>
         </motion.div>
 
