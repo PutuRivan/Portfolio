@@ -44,7 +44,7 @@ const About = () => {
           </p>
           <div className="flex flex-row gap-5 justify-center">
             <a
-              href="https://drive.google.com/uc?export=download&id=1WhlVpv_dtj3oyGEMYFhkhSFDRme5bWO4"
+              href="https://drive.google.com/uc?export=download&id=15CvZmBcdfM4-hAJAjpBkJJpf89KUzrSB"
               target="_blank"
               rel="noopener noreferrer"
               className="flex flex-row gap-2"
