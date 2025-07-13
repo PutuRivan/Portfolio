@@ -21,7 +21,7 @@ const Hero = () => {
         className="flex flex-row gap-3 border border-[#fff] px-6 py-3 rounded-xl opacity-[0.9] "
       >
         <PiShootingStarFill size={24} fill="#2196f3" />
-        <h1 className="text-white">Fullstack Developer</h1>
+        <h1 className="text-white">Fullstack & UI/UX Developer</h1>
       </motion.div>
       {/* Title */}
       <motion.div

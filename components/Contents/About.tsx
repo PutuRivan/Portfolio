@@ -34,17 +34,12 @@ const About = () => {
             <h1 className="text-center">Putu Rivan Anggana</h1>
           </div>
           <p className="text-gray-400 my-5 max-w-[600px] text-justify mx-10 text-md md:text-xl">
-            Informatics student passionate about Fullstack Web Development and
-            UI/UX design, with strong expertise in JavaScript programming.
-            Experienced in developing and deploying responsive web applications,
-            and actively engaged in professional organizations to enhance both
-            technical and interpersonal skills. Continuously seeking
-            opportunities to contribute to innovative projects and grow as a
-            versatile developer.
+            Tech enthusiast who enjoys turning ideas into real projects. I work mostly with TypeScript to build responsive and user-friendly applications.
+            Outside of coding, I mentor fellow learners and actively contribute to tech communities. Let&apos;s connect and build something meaningful together!
           </p>
           <div className="flex flex-row gap-5 justify-center">
             <a
-              href="https://drive.google.com/uc?export=download&id=14XxpVQEEGex_IRhmul-8rT32qKD_Rpic"
+              href="https://drive.google.com/uc?export=download&id=15CvZmBcdfM4-hAJAjpBkJJpf89KUzrSB"
               target="_blank"
               rel="noopener noreferrer"
               className="flex flex-row gap-2"
